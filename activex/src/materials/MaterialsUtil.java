@@ -13,22 +13,22 @@ public class MaterialsUtil {
 		List<MaterialsItemFrom1C> materialList = new ArrayList<>();
 		Variant connected = getConnection();
 
-		StringBuilder sb = new StringBuilder("ВЫБРАТЬ");
-		sb.append("	ПРЕДСТАВЛЕНИЕ(МатериалыКПоступлениюСрезПоследних.Склад) КАК stock,")
-				.append(" ПРЕДСТАВЛЕНИЕ(МатериалыКПоступлениюСрезПоследних.Материал) КАК material,")
-				.append(" МатериалыКПоступлениюСрезПоследних.Количество КАК amount,")
-				.append(" МатериалыКПоступлениюСрезПоследних.Импорт КАК isImport,")
-				.append(" МатериалыКПоступлениюСрезПоследних.Склад.Код КАК stockCode,")
-				.append(" МатериалыКПоступлениюСрезПоследних.Материал.Код КАК materialCode").append(" ИЗ")
-				.append(" РегистрСведений.МатериалыКПоступлению.СрезПоследних КАК МатериалыКПоступлениюСрезПоследних")
-				.append(" ОБЪЕДИНИТЬ ВСЕ").append(" ВЫБРАТЬ")
-				.append(" ПРЕДСТАВЛЕНИЕ(МатериалыВНаличииСрезПоследних.Склад),")
-				.append(" ПРЕДСТАВЛЕНИЕ(МатериалыВНаличииСрезПоследних.Материал),")
-				.append(" МатериалыВНаличииСрезПоследних.Количество,").append(" МатериалыВНаличииСрезПоследних.Импорт,")
-				.append(" МатериалыВНаличииСрезПоследних.Склад.Код,")
-				.append(" МатериалыВНаличииСрезПоследних.Материал.Код").append(" ИЗ ")
-				.append(" РегистрСведений.МатериалыВНаличии.СрезПоследних КАК МатериалыВНаличииСрезПоследних")
-				.append(" УПОРЯДОЧИТЬ ПО ").append(" materialCode,").append(" stockCode");
+		StringBuilder sb = new StringBuilder("Р’Р«Р‘Р РђРўР¬");
+		sb.append("	РџР Р•Р”РЎРўРђР’Р›Р•РќРР•(РњР°С‚РµСЂРёР°Р»С‹РљРџРѕСЃС‚СѓРїР»РµРЅРёСЋРЎСЂРµР·РџРѕСЃР»РµРґРЅРёС….РЎРєР»Р°Рґ) РљРђРљ stock,")
+				.append(" РџР Р•Р”РЎРўРђР’Р›Р•РќРР•(РњР°С‚РµСЂРёР°Р»С‹РљРџРѕСЃС‚СѓРїР»РµРЅРёСЋРЎСЂРµР·РџРѕСЃР»РµРґРЅРёС….РњР°С‚РµСЂРёР°Р») РљРђРљ material,")
+				.append(" РњР°С‚РµСЂРёР°Р»С‹РљРџРѕСЃС‚СѓРїР»РµРЅРёСЋРЎСЂРµР·РџРѕСЃР»РµРґРЅРёС….РљРѕР»РёС‡РµСЃС‚РІРѕ РљРђРљ amount,")
+				.append(" РњР°С‚РµСЂРёР°Р»С‹РљРџРѕСЃС‚СѓРїР»РµРЅРёСЋРЎСЂРµР·РџРѕСЃР»РµРґРЅРёС….РРјРїРѕСЂС‚ РљРђРљ isImport,")
+				.append(" РњР°С‚РµСЂРёР°Р»С‹РљРџРѕСЃС‚СѓРїР»РµРЅРёСЋРЎСЂРµР·РџРѕСЃР»РµРґРЅРёС….РЎРєР»Р°Рґ.РљРѕРґ РљРђРљ stockCode,")
+				.append(" РњР°С‚РµСЂРёР°Р»С‹РљРџРѕСЃС‚СѓРїР»РµРЅРёСЋРЎСЂРµР·РџРѕСЃР»РµРґРЅРёС….РњР°С‚РµСЂРёР°Р».РљРѕРґ РљРђРљ materialCode").append(" РР—")
+				.append(" Р РµРіРёСЃС‚СЂРЎРІРµРґРµРЅРёР№.РњР°С‚РµСЂРёР°Р»С‹РљРџРѕСЃС‚СѓРїР»РµРЅРёСЋ.РЎСЂРµР·РџРѕСЃР»РµРґРЅРёС… РљРђРљ РњР°С‚РµСЂРёР°Р»С‹РљРџРѕСЃС‚СѓРїР»РµРЅРёСЋРЎСЂРµР·РџРѕСЃР»РµРґРЅРёС…")
+				.append(" РћР‘РЄР•Р”РРќРРўР¬ Р’РЎР•").append(" Р’Р«Р‘Р РђРўР¬")
+				.append(" РџР Р•Р”РЎРўРђР’Р›Р•РќРР•(РњР°С‚РµСЂРёР°Р»С‹Р’РќР°Р»РёС‡РёРёРЎСЂРµР·РџРѕСЃР»РµРґРЅРёС….РЎРєР»Р°Рґ),")
+				.append(" РџР Р•Р”РЎРўРђР’Р›Р•РќРР•(РњР°С‚РµСЂРёР°Р»С‹Р’РќР°Р»РёС‡РёРёРЎСЂРµР·РџРѕСЃР»РµРґРЅРёС….РњР°С‚РµСЂРёР°Р»),")
+				.append(" РњР°С‚РµСЂРёР°Р»С‹Р’РќР°Р»РёС‡РёРёРЎСЂРµР·РџРѕСЃР»РµРґРЅРёС….РљРѕР»РёС‡РµСЃС‚РІРѕ,").append(" РњР°С‚РµСЂРёР°Р»С‹Р’РќР°Р»РёС‡РёРёРЎСЂРµР·РџРѕСЃР»РµРґРЅРёС….РРјРїРѕСЂС‚,")
+				.append(" РњР°С‚РµСЂРёР°Р»С‹Р’РќР°Р»РёС‡РёРёРЎСЂРµР·РџРѕСЃР»РµРґРЅРёС….РЎРєР»Р°Рґ.РљРѕРґ,")
+				.append(" РњР°С‚РµСЂРёР°Р»С‹Р’РќР°Р»РёС‡РёРёРЎСЂРµР·РџРѕСЃР»РµРґРЅРёС….РњР°С‚РµСЂРёР°Р».РљРѕРґ").append(" РР— ")
+				.append(" Р РµРіРёСЃС‚СЂРЎРІРµРґРµРЅРёР№.РњР°С‚РµСЂРёР°Р»С‹Р’РќР°Р»РёС‡РёРё.РЎСЂРµР·РџРѕСЃР»РµРґРЅРёС… РљРђРљ РњР°С‚РµСЂРёР°Р»С‹Р’РќР°Р»РёС‡РёРёРЎСЂРµР·РџРѕСЃР»РµРґРЅРёС…")
+				.append(" РЈРџРћР РЇР”РћР§РРўР¬ РџРћ ").append(" materialCode,").append(" stockCode");
 		Dispatch query = Dispatch.call(connected.getDispatch(), "NewObject", "Query").getDispatch();
 		Dispatch.put(query, "Text", sb.toString());
 		Dispatch result = Dispatch.call(query, "Execute").toDispatch();
@@ -55,13 +55,13 @@ public class MaterialsUtil {
 
 		/* Constructed object */
 		Dispatch constrObjManager = Dispatch
-				.call(connected.getDispatch(), "NewObject", "CatalogManager.ОбъектыСтроительства").getDispatch();
+				.call(connected.getDispatch(), "NewObject", "CatalogManager.РћР±СЉРµРєС‚С‹РЎС‚СЂРѕРёС‚РµР»СЊСЃС‚РІР°").getDispatch();
 		Dispatch constrObjManagerDisp = Dispatch
 				.call(constrObjManager, "FindByCode", orderDocument.getConstructedObjectCode()).toDispatch();
 		Dispatch.put(orderMaterialsDoc, "ConstructedObject", Dispatch.get(constrObjManagerDisp, "Ref"));
 
 		/* Stock object */
-		Dispatch stockObjManager = Dispatch.call(connected.getDispatch(), "NewObject", "CatalogManager.Склады")
+		Dispatch stockObjManager = Dispatch.call(connected.getDispatch(), "NewObject", "CatalogManager.РЎРєР»Р°РґС‹")
 				.getDispatch();
 		Dispatch stockObjManagerDisp = Dispatch.call(stockObjManager, "FindByCode", orderDocument.getStockCode())
 				.toDispatch();
@@ -75,7 +75,7 @@ public class MaterialsUtil {
 
 			/* Nomenclature object */
 			Dispatch nomenclObjManager = Dispatch
-					.call(connected.getDispatch(), "NewObject", "CatalogManager.Номенклатура").getDispatch();
+					.call(connected.getDispatch(), "NewObject", "CatalogManager.РќРѕРјРµРЅРєР»Р°С‚СѓСЂР°").getDispatch();
 			Dispatch nomenclObjDisp = Dispatch.call(nomenclObjManager, "FindByCode", item.getMaterial().getCode())
 					.toDispatch();
 			Dispatch.put(materialItemDisp, "Nomenclature", Dispatch.get(nomenclObjDisp, "Ref"));
