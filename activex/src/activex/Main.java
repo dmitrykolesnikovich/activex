@@ -23,12 +23,12 @@ public class Main {
 	}
 
 	private static void send1c() {
-		Nomenclature material1 = new Nomenclature("000000004", "Цемент 500");
-		Nomenclature material2 = new Nomenclature("000000003", "Цемент 400");
+		Nomenclature material1 = new Nomenclature("000000004", "Р¦РµРјРµРЅС‚ 500");
+		Nomenclature material2 = new Nomenclature("000000003", "пїЅР¦РµРјРµРЅС‚пїЅпїЅпїЅпїЅ 400");
 
 		List<OrderMaterialsItem> materials = new ArrayList<>();
-		materials.add(new OrderMaterialsItem(material1, 340, "Комментарий 1", false, 0));
-		materials.add(new OrderMaterialsItem(material2, 560, "Комментарий 2", true, 6));
+		materials.add(new OrderMaterialsItem(material1, 340, "РљРѕРјРјРµРЅС‚Р°СЂРёР№ 1", false, 0));
+		materials.add(new OrderMaterialsItem(material2, 560, "РљРѕРјРјРµРЅС‚Р°СЂРёР№ 2", true, 6));
 
 		OrderDocument orderDocument = new OrderDocument("000000001", "000000002", materials);
 		MaterialsUtil.sendOrder(orderDocument);
